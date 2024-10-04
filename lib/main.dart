@@ -35,32 +35,86 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey,
-        appBar: AppBar(
-          backgroundColor: Colors.orange,
-          title: Text(
-            "Les widget de bases",
-            style: TextStyle(color: Colors.white),
-          ),
-          leading: Icon(Icons.home),
-          actions: [
-            Icon(Icons.search),
-          ],
-          elevation: 50,
-          centerTitle: true,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        title: Text(
+          "Les widget de bases",
+          style: TextStyle(color: Colors.white),
         ),
-        body: Column(
-          children: [
-            Text("Salut de base de base de base"),
-            Container(
-              color: Colors.red,
-              height: 32,
+        leading: Icon(Icons.home),
+        actions: [
+          Icon(Icons.search),
+        ],
+        elevation: 50,
+        centerTitle: true,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Divider(
+            height: 10,
+            thickness: 1,
+            indent: 1,
+            endIndent: 2,
+            color: Colors.black,
+          ),
+
+          Text("Salut de base de base de base"),
+          const Divider(
+            height: 10,
+            thickness: 1,
+            indent: 1,
+            endIndent: 2,
+            color: Colors.black,
+          ),
+          Spacer(),
+          Container(
+            color: Colors.black45,
+            height: 32,
+            child: Center(
+              child: Text("C'est une container rouge"),
             ),
-            Icon(
-              Icons.add,
-              color: Colors.orange,
+          ),
+          Container(
+            child: const Center(
+              child: Text("C'est un container jaune"),
             ),
-          ],
-        ));
+          ),
+          Container(
+            color: Colors.black45,
+            height: 32,
+            child: Center(
+              child: Text("C'est une container rouge"),
+            ),
+          ),
+          //const SizedBox(height: 16),
+          Container(
+            child: const Center(
+              child: Text("C'est un container jaune"),
+            ),
+          ),
+          Container(
+            color: Colors.black45,
+            height: 32,
+            child: const Center(
+              child: Text("C'est un container normalement blancs"),
+            ),
+          ),
+          Container(
+            child: const Center(
+              child: Text("C'est un container jaune"),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Icon(
+            Icons.add_a_photo,
+            color: Colors.orange,
+            size: 50,
+          ),
+          Spacer(),
+        ],
+      ),
+    );
   }
 }
