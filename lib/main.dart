@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,26 +35,32 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.orange,
-        title: Text(
-          "Les widget de bases",
-          style: TextStyle(color: Colors.white),
+        backgroundColor: Colors.grey,
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          title: Text(
+            "Les widget de bases",
+            style: TextStyle(color: Colors.white),
+          ),
+          leading: Icon(Icons.home),
+          actions: [
+            Icon(Icons.search),
+          ],
+          elevation: 50,
+          centerTitle: true,
         ),
-        leading: Icon(Icons.home),
-        actions: [
-          Icon(Icons.search),
-        ],
-        elevation: 50,
-      ),
-      body: Center(
-        child: Icon(
-          FontAwesomeIcons.upDown,
-          color: Colors.amber,
-          size: 300.0,
-          //offset:  const Offset(4, 2)
-        ),
-      ),
-    );
+        body: Column(
+          children: [
+            Text("Salut de base de base de base"),
+            Container(
+              color: Colors.red,
+              height: 32,
+            ),
+            Icon(
+              Icons.add,
+              color: Colors.orange,
+            ),
+          ],
+        ));
   }
 }
